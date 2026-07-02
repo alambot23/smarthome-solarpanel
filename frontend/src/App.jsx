@@ -72,7 +72,7 @@ function App() {
           <button onClick={() => setActiveTab('dashboard')} className={activeTab === 'dashboard' ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors'}>Dashboard</button>
           <button onClick={() => setActiveTab('sensor')} className={activeTab === 'sensor' ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors'}>Sensor</button>
           <button onClick={() => setActiveTab('device')} className={activeTab === 'device' ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors'}>Device</button>
-          <button onClick={() => setActiveTab('power')} className={activeTab === 'power' ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors'}>Power</button>
+          {/* <button onClick={() => setActiveTab('power')} className={activeTab === 'power' ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors'}>Power</button> */}
         </div>
       </nav>
 

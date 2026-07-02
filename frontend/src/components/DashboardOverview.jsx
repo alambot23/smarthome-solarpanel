@@ -29,9 +29,9 @@ export default function DashboardOverview({ data, chartData }) {
         </div>
         
         <div className="card">
-          <p className="text-gray-500 text-sm mb-2">Power Usage</p>
-          <div className="text-3xl font-bold">{data.power.solarPower.toFixed(2)}W</div>
-          <p className="text-xs text-gray-400 mt-2">Daya panel surya</p>
+          <p className="text-gray-500 text-sm mb-2"></p>
+          <div className="text-3xl font-bold"></div>
+          <p className="text-xs text-gray-400 mt-2"></p>
         </div>
       </div>
 
@@ -61,11 +61,11 @@ export default function DashboardOverview({ data, chartData }) {
           </div>
         </div>
         
-        <div className="card flex flex-col items-center justify-center">
-          <h3 className="font-semibold mb-2 self-start w-full">System Efficiency</h3>
+      <div className="card flex flex-col items-center justify-center">
+          <h3 className="font-semibold mb-2 self-start w-full"></h3>
           <div className="flex-1 flex flex-col items-center justify-center">
-            <div className="text-5xl font-bold text-red-500">{data.power.systemEfficiency.toFixed(1)}%</div>
-            <p className="text-gray-500 text-sm mt-2">Efisiensi Transfer Daya (Output/Input)</p>
+            <div className="text-5xl font-bold text-red-500"></div>
+            <p className="text-gray-500 text-sm mt-2"></p>
           </div>
         </div>
       </div>
