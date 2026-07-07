@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/system');
+        const response = await fetch('https://smarthome-solarpanel.vercel.app/api/system');
         const data = await response.json();
         setSystemData(data);
 
@@ -45,13 +45,13 @@ function App() {
 
   const updateDeviceControl = async (controlData) => {
     try {
-      await fetch('http://localhost:3000/api/control', {
+      await fetch('https://smarthome-solarpanel.vercel.app/api/control', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(controlData)
       });
       // Ambil data terbaru setelah merubah status
-      const response = await fetch('http://localhost:3000/api/system');
+      const response = await fetch('https://smarthome-solarpanel.vercel.app/api/system');
       setSystemData(await response.json());
     } catch (error) {
       console.error("Gagal mengupdate kontrol:", error);
