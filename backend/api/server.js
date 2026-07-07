@@ -94,9 +94,12 @@ app.post("/api/power", (req, res) => {
 module.exports = app;
 
 // Jalankan server lokal hanya jika tidak berada di lingkungan serverless Vercel
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(config.port, '0.0.0.0', () => {
-    console.log(`Server Backend berjalan di port ${config.port}`);
-    console.log(`Siap menerima data dari ESP32!`);
-  });
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   app.listen(config.port, '0.0.0.0', () => {
+//     console.log(`Server Backend berjalan di port ${config.port}`);
+//     console.log(`Siap menerima data dari ESP32!`);
+//   });
+// }
+
+module.exports = app; 
+
