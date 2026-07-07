@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const config = require("./config");
+const config = require("../config"); // Perbaikan jalur: mundur satu folder
 
 const app = express();
 app.use(cors());
@@ -90,7 +90,13 @@ app.post("/api/power", (req, res) => {
   res.status(201).json({ message: "Data power diterima" });
 });
 
-app.listen(config.port, '0.0.0.0', () => {
-  console.log(`Server Backend berjalan di port ${config.port}`);
-  console.log(`Siap menerima data dari ESP32!`);
-});
+// PERBAIKAN UTAMA VERCEL: Ekspor module app Express agar bisa dieksekusi secara serverless
+module.exports = app;
+
+// Jalankan server lokal hanya jika tidak berada di lingkungan serverless Vercel
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(config.port, '0.0.0.0', () => {
+    console.log(`Server Backend berjalan di port ${config.port}`);
+    console.log(`Siap menerima data dari ESP32!`);
+  });
+}
