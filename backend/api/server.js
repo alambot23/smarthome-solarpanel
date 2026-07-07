@@ -68,7 +68,7 @@ app.post("/api/environment", (req, res) => {
   if (lightLevel !== undefined) systemState.sensors.lightLevel = lightLevel;
   if (motion !== undefined) systemState.sensors.motion = motion;
 
-  res.status(201).json({ message: "Data environment diterima" });
+  res.status(201).json({ message: "Data environment diterimaa" });
 });
 
 // 5. ESP32 Mengirim Data Daya (INA219)
